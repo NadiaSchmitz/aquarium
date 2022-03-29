@@ -22,8 +22,10 @@ public class Main {
             	
             	if (temperatur_aktuell - temperatur_normal > 0 && deviation_aktuell > deviation_normal) {
             		control.setStatus("Zu warm!");
+            		control.setCommand("Heizung aus");
             	} else if (temperatur_aktuell - temperatur_normal < 0 && deviation_aktuell < -deviation_normal) {
             		control.setStatus("Zu kalt!");
+            		control.setCommand("Heizung an");
             	} else {
             		control.setStatus("In Ordnung");
             	}
